@@ -1,4 +1,6 @@
-# eks_test_fixture example
+# eks_test_fixture example      
+
+[Uses this Terraform Module:](https://github.com/terraform-aws-modules/terraform-aws-eks)     
 
 This set of templates serves a few purposes. It:
 
