@@ -9,7 +9,7 @@
 3.  provides a simple way to play with the Kubernetes cluster you create.
 
 ## IAM Permissions
-
+**/TODO: Harden the IAM policy**    
 The following IAM policy is the minimum needed to execute the module from the test suite.
 
 ```json
