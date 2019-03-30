@@ -1,0 +1,29 @@
+#Example .kube/config file
+apiVersion: v1
+clusters:
+  - cluster:
+      server: '<api endpoint>'
+      certificate-authority-data: >-
+        <server certificate base64 data>
+    name: <eks cluster name>
+contexts:
+  - context:
+      cluster: <eks cluster name>
+      user: aws
+    name: aws
+current-context: aws
+kind: Config
+preferences: {}
+users:
+  - name: aws
+    user:
+      exec:
+        apiVersion: client.authentication.k8s.io/v1alpha1
+        command: aws-iam-authenticator
+        args:
+          - token
+          - '-i'
+          - <cluster name>
+        env:
+          - name: AWS_PROFILE
+            value: <aws cli profile name>
