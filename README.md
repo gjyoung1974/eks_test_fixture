@@ -8,6 +8,10 @@
 2.  serves as the test infrastructure for CI on the project.
 3.  provides a simple way to work with with EKS clusters for testing things like Custom AMI Images.
 
+#### Sample IAM policy for a Role to manage EKS:    
+**/TODO: Needs better resource scoping**    
+[eks_role.json](https://github.com/gjyoung1974/eks_test_fixture/blob/master/IAM/eks_role.json)    
+
 ####    
 
 2019 Gordon Young gjyoung1974@gmail.com
