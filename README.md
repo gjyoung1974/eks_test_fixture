@@ -12,6 +12,11 @@
 **/TODO: Needs better resource scoping**    
 [eks_role.json](https://github.com/gjyoung1974/eks_test_fixture/blob/master/IAM/eks_role.json)    
 
+Configure .kube/config
+
+https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+aws eks --region region update-kubeconfig --name cluster_name
+
 ####    
 
 2019 Gordon Young gjyoung1974@gmail.com

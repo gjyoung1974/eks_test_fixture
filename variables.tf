@@ -9,7 +9,7 @@ variable "map_accounts" {
   type        = "list"
 
   default = [
-    "999999999999",
+    "883127560329",
   ]
 }
 
@@ -25,7 +25,7 @@ variable "map_roles" {
 
   default = [
     {
-      role_arn = "arn:aws:iam::999999999999:role/AllowManageEKSClusters"
+      role_arn = "arn:aws:iam::883127560329:role/AllowManageEKSClusters"
       username = "AllowManageEKSClusters"
       group    = "system:masters"
     },
@@ -44,12 +44,12 @@ variable "map_users" {
 
   default = [
     {
-      user_arn = "arn:aws:iam::999999999999:user/AWSEKSMasterUser1"
+      user_arn = "arn:aws:iam::883127560329:user/AWSEKSMasterUser1"
       username = "AWSEKSMasterUser1"
       group    = "system:masters"
     },
     {
-      user_arn = "arn:aws:iam::999999999999:user/AWSEKSMasterUser2"
+      user_arn = "arn:aws:iam::883127560329:user/AWSEKSMasterUser2"
       username = "AWSEKSMasterUser2"
       group    = "system:masters"
     },
@@ -60,4 +60,9 @@ variable "map_users_count" {
   description = "The count of roles in the map_users list."
   type        = "string"
   default     = 2
+}
+
+variable "worker_ami_name_filter" {
+  description = "Additional name filter for AWS EKS worker AMI. Default behaviour will get latest for the cluster_version but could be set to a release from amazon-eks-ami, e.g. \"v20190220\""
+  default     = "v*"
 }

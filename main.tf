@@ -1,4 +1,11 @@
 #TODO enable private API Access & include a bastion host
+# 
+#TODO enale all the logging opgtions
+# API server
+# Audit
+# Authenticator
+# Controller manager
+# Scheduler
 
 terraform {
   required_version = ">= 0.11.8"
@@ -39,6 +46,7 @@ locals {
       asg_desired_capacity                     = "2"
       spot_instance_pools                      = 10
       on_demand_percentage_above_base_capacity = "0"
+
     },
   ]
 
